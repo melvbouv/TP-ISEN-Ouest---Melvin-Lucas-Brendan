@@ -64,23 +64,55 @@
             text-decoration: underline;
         }
 
-        /* ====== CONTENU PRINCIPAL ====== */
-        main {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-            line-height: 1.6;
+        /* ====== SECTION TEXTE + IMAGE ====== */
+        .block-devenir {
+            background: #fff;
+            padding: 60px 20px;
         }
 
-        main h1 {
-            color: #e30613;
-            text-align: center;
-            margin-bottom: 20px;
+        .block-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        main p {
-            margin-bottom: 16px;
+        .block-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .block-columns-img {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .block-text {
+            flex: 1;
+            padding-left: 5%;
+        }
+
+        .block-text p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 18px;
             text-align: justify;
+        }
+
+        .block-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .block-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
         }
 
         /* ====== FOOTER ====== */
@@ -152,24 +184,34 @@
         </div>
     </header>
 
-    <!-- ===== CONTENU PRINCIPAL ===== -->
-    <main>
-        <h1>Devenir Ingénieur</h1>
-        <p>
-            Bienvenue sur la page <strong>Devenir Ingénieur</strong> de l’ISEN Ouest.
-            Cette page présente les parcours, formations et opportunités offertes aux étudiants
-            souhaitant devenir ingénieurs dans les domaines des technologies et du numérique.
-        </p>
+    <!-- ===== SECTION TEXTE + IMAGE ===== -->
+    <section class="block-devenir">
+        <div class="block-container">
+            <h1 class="block-title">Devenir Ingénieur à l’ISEN Ouest</h1>
 
-        <p>
-            Tu peux ici ajouter différentes sections : par exemple une présentation des cursus,
-            des témoignages d’élèves, ou encore des débouchés professionnels.
-        </p>
+            <div class="block-columns-img">
+                <div class="block-text">
+                    <p>
+                        L’ISEN Ouest forme des ingénieurs capables d’imaginer, concevoir et piloter les technologies du futur.
+                        Ses formations allient sciences, innovation et ouverture sur le monde professionnel.
+                    </p>
+                    <p>
+                        Les étudiants développent des compétences solides en informatique, électronique, énergie, 
+                        cybersécurité et bien plus encore. L’apprentissage par projets favorise l’autonomie, la créativité 
+                        et le travail en équipe.
+                    </p>
+                    <p>
+                        Grâce aux partenariats avec de nombreuses entreprises et aux expériences internationales,
+                        les diplômés de l’ISEN sont rapidement opérationnels et recherchés sur le marché du travail.
+                    </p>
+                </div>
 
-        <p>
-            Ce contenu est libre : tu peux le personnaliser selon ton projet, ton TP ou les consignes reçues.
-        </p>
-    </main>
+                <div class="block-image">
+                    <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="Étudiants ISEN Ouest">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
