@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devenir Ingénieur</title>
+    <title>Contact — ISEN Ouest</title>
 
     <style>
         /* ====== STYLES GLOBAUX ====== */
@@ -64,24 +64,119 @@
             text-decoration: underline;
         }
 
-        /* ====== CONTENU PRINCIPAL ====== */
-        main {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-            line-height: 1.6;
+        /* ====== FORMULAIRE ====== */
+        .contact-card {
+            max-width: 720px;
+            margin: 3em auto;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 6px 24px rgba(12,12,12,0.2);
+            padding: 28px;
+            box-sizing: border-box;
+            border: 1px solid #e6e6e6;
         }
 
-        main h1 {
-            color: #e30613;
-            text-align: center;
-            margin-bottom: 20px;
+        .contact-card h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
         }
 
-        main p {
-            margin-bottom: 16px;
-            text-align: justify;
+        .contact-card .lead {
+            margin: 0 0 18px 0;
+            color: #6b6b6b;
+            font-size: 15px;
+            line-height: 1.5;
         }
+
+        .notice {
+            background: #fff8f9;
+            border-left: 4px solid #c8102e;
+            color: #333;
+            padding: 10px 12px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        form.contact-form {
+            display: block;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .w-100 { width: 100%; }
+
+        label.field-label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #222;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d7d7d7;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background: #fff;
+            color: #111;
+        }
+
+        textarea { min-height: 140px; resize: vertical; }
+
+        .inline-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .inline-group label {
+            font-size: 14px;
+            color: #222;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .small-note { font-size: 13px; color: #6b6b6b; margin-top: 6px; }
+
+        .actions { margin-top: 8px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+        .btn-primary {
+            background: #c8102e;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            border: 0;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover { background: #a00b23; }
+
+        .helper-link { font-size: 14px; color: #6b6b6b; text-decoration: none; }
+        .helper-link:hover { text-decoration: underline; color: #000; }
+
+        .hp { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 
         /* ====== FOOTER ====== */
         .site-footer {
@@ -89,6 +184,7 @@
             color: #fff;
             padding: 40px 20px 20px;
             font-family: Arial, sans-serif;
+            margin-top: 60px;
         }
 
         .footer-container {
@@ -141,34 +237,65 @@
     <!-- ===== HEADER ===== -->
     <header class="header-isen">
         <div class="header-container">
-            <a href="/" class="header-logo">
+            <a href="#" class="header-logo">
                 <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
             </a>
             <nav class="header-nav">
                 <ul>
-                    <li><a href="#">Liens à venir</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== CONTENU PRINCIPAL ===== -->
+    <!-- ===== FORMULAIRE DE CONTACT ===== -->
     <main>
-        <h1>Devenir Ingénieur</h1>
-        <p>
-            Bienvenue sur la page <strong>Devenir Ingénieur</strong> de l’ISEN Ouest.
-            Cette page présente les parcours, formations et opportunités offertes aux étudiants
-            souhaitant devenir ingénieurs dans les domaines des technologies et du numérique.
-        </p>
+        <div class="contact-card" id="contact" aria-labelledby="contact-title">
+            <h1 id="contact-title">Contactez-nous</h1>
+            <p class="lead">Remplissez le formulaire ci-dessous pour nous envoyer votre demande.</p>
 
-        <p>
-            Tu peux ici ajouter différentes sections : par exemple une présentation des cursus,
-            des témoignages d’élèves, ou encore des débouchés professionnels.
-        </p>
+            <div class="notice">« * » indique les champs nécessaires</div>
 
-        <p>
-            Ce contenu est libre : tu peux le personnaliser selon ton projet, ton TP ou les consignes reçues.
-        </p>
+            <form class="contact-form" action="#" method="post" novalidate>
+                <div class="form-row w-100">
+                    <label class="field-label" for="profile">Vous êtes ? *</label>
+                    <select id="profile" name="profile" required>
+                        <option value="">Sélectionnez votre profil</option>
+                        <option>Particulier</option>
+                        <option>Professionnel</option>
+                        <option>Chercheur</option>
+                        <option>Étudiant étranger</option>
+                        <option>Journaliste</option>
+                        <option>Prestataire</option>
+                        <option>Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-row w-100">
+                    <label class="field-label" for="firstname">Prénom *</label>
+                    <input id="firstname" name="firstname" type="text" required>
+                </div>
+
+                <div class="form-row w-100">
+                    <label class="field-label" for="lastname">Nom *</label>
+                    <input id="lastname" name="lastname" type="text" required>
+                </div>
+
+                <div class="form-row w-100">
+                    <label class="field-label" for="email">Email *</label>
+                    <input id="email" name="email" type="email" placeholder="Saisissez un e-mail" required>
+                </div>
+
+                <div class="form-row w-100">
+                    <label class="field-label" for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Votre message..."></textarea>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Envoyer</button>
+                </div>
+            </form>
+        </div>
     </main>
 
     <!-- ===== FOOTER ===== -->
@@ -176,14 +303,12 @@
         <div class="footer-container">
             <div class="footer-col footer-col-logo">
                 <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" 
-                    alt="ISEN Ouest" class="footer-logo">
+                     alt="ISEN Ouest" class="footer-logo">
             </div>
-
             <div class="footer-links-section">
                 <p class="footer-cities">Texte à venir</p>
             </div>
         </div>
-
         <div class="footer-bottom">
             &copy; ISEN Ouest – 2025
         </div>
@@ -191,3 +316,4 @@
 
 </body>
 </html>
+
