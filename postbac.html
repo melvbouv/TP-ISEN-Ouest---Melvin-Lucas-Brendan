@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ISEN - Exemple Page</title>
+  <title>ISEN - Exemple Page complète</title>
   <style>
 html {
   font-family: Open Sans, sans-serif;
@@ -17,7 +17,7 @@ html {
 
 /* Organisation interne */
 .header-container {
-  max-width: 1400px; /* un peu plus large pour aérer */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -27,27 +27,27 @@ html {
 
 /* Logo */
 .header-logo img {
-  height: 45px; /* logo moins haut */
+  height: 45px;
   width: auto;
 }
 
 /* Navigation */
 .header-nav {
-  background: #e30613; /* Rouge ISEN */
-  flex: 1; /* occupe toute la largeur dispo */
-  margin-left: 40px; /* espace entre logo et barre rouge */
+  background: #e30613;
+  flex: 1;
+  margin-left: 40px;
 }
 
 .header-nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around; /* liens espacés sur toute la largeur */
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
 
 .header-nav li {
-  flex: 1; /* chaque lien occupe une largeur égale */
+  flex: 1;
   text-align: center;
 }
 
@@ -63,6 +63,61 @@ html {
 
 .header-nav a:hover {
   text-decoration: underline;
+}
+
+/* ================= TEXT_IMG ================= */
+.block-devenir {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+/* Conteneur global */
+.block-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titre en haut */
+.block-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Deux colonnes */
+.block-columns-img {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Colonne texte */
+.block-text {
+  flex: 1;
+  padding-left: 5%;
+}
+
+.block-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* Colonne image */
+.block-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.block-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 /* ================= FOOTER ================= */
@@ -193,23 +248,47 @@ html {
     </div>
   </header>
 
-  <!-- ================= CONTENU PAGE ================= -->
-  <main style="min-height: 400px; text-align:center; padding: 50px;">
-    <h1>Bienvenue sur la page ISEN</h1>
-    <p>Contenu à venir...</p>
+  <!-- ================= CONTENU PRINCIPAL ================= -->
+  <main>
+    <section class="block-devenir">
+      <div class="block-container">
+        <!-- Titre -->
+        <h1 class="block-title">Titre de la section</h1>
+
+        <!-- Deux colonnes -->
+        <div class="block-columns-img">
+          <!-- Colonne texte -->
+          <div class="block-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue nibh et sollicitudin porttitor. Vivamus facilisis elit non leo luctus efficitur. Duis sed molestie tellus, sed porttitor elit.
+            </p>
+            <p>
+              Phasellus hendrerit vel dolor sit amet vestibulum. Proin eu molestie magna. Fusce eu nibh euismod, ornare nunc ut, lacinia orci. Morbi interdum lacus in interdum dignissim.
+            </p>
+            <p>
+              Maecenas eget sapien consequat, mattis dolor non, laoreet erat. Suspendisse lacinia sed mauris eu feugiat. Quisque vitae ultricies mauris. Nulla in nisl non massa mattis facilisis ut in felis.
+            </p>
+          </div>
+
+          <!-- Colonne image -->
+          <div class="block-image">
+            <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="Image illustrative">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="footer-container">
-
-      <!-- Colonne 1 : Logo + bouton -->
+      <!-- Colonne 1 : Logo -->
       <div class="footer-col footer-col-logo">
         <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" 
              alt="ISEN Ouest" class="footer-logo">
       </div>
 
-      <!-- Zone titres + colonnes 2-4 -->
+      <!-- Zone titres + colonnes -->
       <div class="footer-links-section">
         <p class="footer-cities">Texte à venir</p>
       </div>
